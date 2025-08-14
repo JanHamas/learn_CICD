@@ -1,0 +1,10 @@
+name: Hello World
+
+on: push  # Run when you push code to GitHub
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest  # GitHub gives you a free virtual machine
+    steps:
+      - name: Say hello
+        run: echo "Hello from GitHub Actions!"
