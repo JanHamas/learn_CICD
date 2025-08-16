@@ -1,22 +1,26 @@
-name: Run Python Script
+name: Manual Workflow Trigger
 
-on: push  # Runs when you push code
+on:
+  workflow_dispatch:
+    inputs:
+      enviroment:
+        description: 'Target enviroment'
+        required: ture
+        default: 'staging'
+        type: choice
+        options:
+          - 'Staging'
+          - 'production'
+        message:
+          description: 'Custom message for the run'
+          required: false
+          type: string
 
 jobs:
-  run-script:
+  my_jobs:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Get your code
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      # Step 2: Set up Python
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'  # Change to your version
-
-      # Step 3: Run the script
-      - name: Run main.py
-        run: python main.py
+      - name: Print inputs
+      run: |
+        echo "Running in enviroment: $ {{ github.event.inputs.enviroments }}"
+        echo "Message : $ {{ github.event.inputs.message }}"
