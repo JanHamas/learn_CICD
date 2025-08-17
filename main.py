@@ -3,7 +3,7 @@
 import random
 from datetime import datetime
 
-# Some jokes  
+# Some jokes    
 jokes = [
     "Why do programmers prefer dark mode? Because light attracts bugs!",
     "I told my computer I needed a break... it froze.",
