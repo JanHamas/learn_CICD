@@ -1,27 +1,19 @@
-name: Manual Workflow Trigger
+name : Conditional Statement
 
-on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Target environment'
-        required: true
-        default: 'staging'
-        type: choice
-        options:
-          - 'staging'
-          - 'production'
-
-      message:
-        description: 'Custom message for the run'
-        required: false
-        type: string
+on: push
 
 jobs:
-  my_job:
+  conditional_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print inputs
-        run: |
-          echo "Running in environment: ${{ github.event.inputs.environment }}"
-          echo "Message: ${{ github.event.inputs.message }}"
+      - name: Always run
+        run: echo "This always runs"
+
+      - name: Run only on main branch
+        if: github.ref == 'refs/heads/main'
+        run: echo "This runs only on main branch"
+      
+      - name: Run only if commits message has fix
+        if: contains(github.event.head_commit.message, 'fix')
+        run: echo "This commit is a fix ✅"
+
