@@ -3,24 +3,25 @@ name: Manual Workflow Trigger
 on:
   workflow_dispatch:
     inputs:
-      enviroment:
-        description: 'Target enviroment'
-        required: ture
+      environment:
+        description: 'Target environment'
+        required: true
         default: 'staging'
         type: choice
         options:
-          - 'Staging'
+          - 'staging'
           - 'production'
-        message:
-          description: 'Custom message for the run'
-          required: false
-          type: string
+
+      message:
+        description: 'Custom message for the run'
+        required: false
+        type: string
 
 jobs:
-  my_jobs:
+  my_job:
     runs-on: ubuntu-latest
     steps:
       - name: Print inputs
-      run: |
-        echo "Running in enviroment: $ {{ github.event.inputs.enviroments }}"
-        echo "Message : $ {{ github.event.inputs.message }}"
+        run: |
+          echo "Running in environment: ${{ github.event.inputs.environment }}"
+          echo "Message: ${{ github.event.inputs.message }}"
