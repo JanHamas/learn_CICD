@@ -1,6 +1,6 @@
 # main.py
 
-import random
+import random, os
 from datetime import datetime
 
 # Some jokes    
