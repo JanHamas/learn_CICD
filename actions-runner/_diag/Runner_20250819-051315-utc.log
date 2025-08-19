@@ -118,3 +118,16 @@
 [2025-08-19 05:13:15Z INFO RunnerServer] EstablishVssConnection
 [2025-08-19 05:13:15Z INFO RunnerServer] Establish connection with 60 seconds timeout.
 [2025-08-19 05:13:15Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-08-19 05:13:17Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-19 05:13:17Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-19 05:13:17Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-19 05:13:17Z INFO BrokerMessageListener] VssConnection created
+[2025-08-19 05:13:17Z INFO Terminal] WRITE LINE: 
+[2025-08-19 05:13:17Z INFO Terminal] WRITE LINE: 
+[2025-08-19 05:13:17Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\Hamas\Desktop\learn_CICD\actions-runner\.credentials_rsaparams
+[2025-08-19 05:13:17Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\Hamas\Desktop\learn_CICD\actions-runner\.credentials_rsaparams
+[2025-08-19 05:13:18Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-08-19 05:13:19Z INFO BrokerMessageListener] Session created.
+[2025-08-19 05:13:19Z INFO Terminal] WRITE LINE: Current runner version: '2.328.0'
+[2025-08-19 05:13:19Z INFO Terminal] WRITE LINE: 2025-08-19 05:13:19Z: Listening for Jobs
+[2025-08-19 05:13:19Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
