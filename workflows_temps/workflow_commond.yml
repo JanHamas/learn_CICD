@@ -1,6 +1,7 @@
 name: "Workflow Commands"
 
-on: ['push']
+on: 
+  push:
 
 jobs:
   my-job:
@@ -8,17 +9,16 @@ jobs:
     steps:
       - name: "group logging"
         run: |
-        echo "::group:: My Group Message"
-        echo "Msg 1"
-        echo "Msg 2"
-        echo "step 1"
-      
+          echo "::group:: My Group Message"
+          echo "Msg 1"
+          echo "Msg 2"
+          echo "step 1"
+          echo "::endgroup::"
+
       - name: "step 1"
         run: |
-        echo "My_VAL=hello" >> $GITHUB_ENV
+          echo "MY_VAL=hello" >> $GITHUB_ENV
 
       - name: "step 2"
         run: |
-        echo $My_VAL
-              
-        
+          echo "$MY_VAL"
