@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 21,
+  "agentName": "DESKTOP-MN9QSO9",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus12.actions.githubusercontent.com/2ggi95CDEfK15z5vBt7g9MRMNPpQw8rgofj6Z2NjnXvPUH6pL8/",
+  "gitHubUrl": "https://github.com/JanHamas/Indeed_operator",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}

@@ -4,7 +4,7 @@ on: push
 
 jobs:
   conditional_job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Always run
         run: echo "This always runs"
