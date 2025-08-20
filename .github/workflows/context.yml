@@ -8,3 +8,4 @@ jobs:
     steps:
       - name: Use secret
         run: echo "My secret is ${{ secrets.API_KEY }}"
+    
