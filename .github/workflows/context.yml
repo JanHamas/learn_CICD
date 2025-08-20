@@ -3,10 +3,8 @@ name: Context Examples
 on: ['push']
 
 jobs:
-    my-context:
-        runs-on: ubuntu-latest
-        steps:
-        - name: "My Step"
-          run: echo "Hello! $MY_ACTION"
-          env:
-            MY_ACTION: ${{ github.action}}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use secret
+        run: echo "My secret is ${{ secrets.API_KEY }}"
